@@ -12,13 +12,12 @@ class HomeScreen extends StatelessWidget {
       body: const Column(
         children: [],
       ),
-      floatingActionButton: Center(
-        child: FloatingActionButton(
-          backgroundColor: Colors.blue,
-          onPressed: () {},
-          child: const Icon(Icons.start),
-        ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.blue,
+        onPressed: () {},
+        child: const Icon(Icons.start),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
