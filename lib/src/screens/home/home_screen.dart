@@ -9,8 +9,15 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Tela Principal"),
       ),
-      body: const Center(
-        child: Text("Corpo principal"),
+      body: const Column(
+        children: [],
+      ),
+      floatingActionButton: Center(
+        child: FloatingActionButton(
+          backgroundColor: Colors.blue,
+          onPressed: () {},
+          child: const Icon(Icons.start),
+        ),
       ),
     );
   }
