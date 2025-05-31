@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordgame/src/screens/home/modals/start_game_modal.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -20,7 +21,13 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue,
-        onPressed: () {},
+        onPressed: () {
+          showDialog(
+              context: context,
+              builder: (_) {
+                return StartGameModal();
+              });
+        },
         child: const Icon(Icons.play_arrow),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

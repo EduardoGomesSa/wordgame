@@ -5,6 +5,8 @@ class StartGameModal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Dialog(
+      child: Text("Escolha o nível"),
+    );
   }
 }
