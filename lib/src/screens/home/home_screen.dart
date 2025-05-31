@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.blue,
         onPressed: () {},
-        child: const Icon(Icons.start),
+        child: const Icon(Icons.play_arrow),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
