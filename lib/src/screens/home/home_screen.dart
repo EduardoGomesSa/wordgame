@@ -8,6 +8,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Tela Principal"),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 20),
+            child: Icon(Icons.menu),
+          ),
+        ],
       ),
       body: const Column(
         children: [],
