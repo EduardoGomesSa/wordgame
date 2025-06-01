@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
           showDialog(
               context: context,
               builder: (_) {
-                return StartGameModal();
+                return const StartGameModal();
               });
         },
         child: const Icon(Icons.play_arrow),
