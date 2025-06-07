@@ -7,5 +7,10 @@
 - Jogo de palavras por letra
 - Jogo de palavras por tema
 
+## Configuração do ambiente
+```bash
+  flutter pub get
+```
+
 ##
 <p align="center">🚧 Em Desenvolvimento 🚧</p>
