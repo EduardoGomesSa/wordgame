@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wordgame/src/screens/home/modals/stop_watcher_down.dart';
 
 class StartGameModal extends StatefulWidget {
   const StartGameModal({super.key});
@@ -54,10 +55,22 @@ class _StartGameModalState extends State<StartGameModal> {
               width: double.infinity,
               height: 50,
               child: ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                  showDialog(
+                    context: context,
+                    barrierDismissible: false,
+                    builder: (context) => const Dialog(
+                      backgroundColor: Colors.transparent,
+                      child: Padding(
+                        padding: EdgeInsets.all(20),
+                        child: StopWatcherDown(),
+                      ),
+                    ),
+                  );
+                },
                 label: const Text("Iniciar partida"),
                 icon: const Icon(Icons.play_circle),
-                
               ),
             ),
           ],
