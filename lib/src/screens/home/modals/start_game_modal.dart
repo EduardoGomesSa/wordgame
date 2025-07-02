@@ -50,10 +50,15 @@ class _StartGameModalState extends State<StartGameModal> {
                 });
               },
             ),
-            ElevatedButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.start),
-              label: const Text("Iniciar partida"),
+            SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton.icon(
+                onPressed: () {},
+                label: const Text("Iniciar partida"),
+                icon: const Icon(Icons.play_circle),
+                
+              ),
             ),
           ],
         ),
