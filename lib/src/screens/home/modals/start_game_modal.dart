@@ -50,6 +50,11 @@ class _StartGameModalState extends State<StartGameModal> {
                 });
               },
             ),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: const Icon(Icons.start),
+              label: const Text("Iniciar partida"),
+            ),
           ],
         ),
       ),
