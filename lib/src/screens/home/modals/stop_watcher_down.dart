@@ -50,10 +50,9 @@ class _StopWatcherDownState extends State<StopWatcherDown> {
             width: 150,
             height: 150,
             decoration: BoxDecoration(
-              // color: Colors.blue[100],
-              color: Colors.blue,
+              color: Colors.blue[100],
               shape: BoxShape.circle,
-              border: Border.all(color: Colors.blue, width: 4),
+              border: Border.all(color: Colors.blue[100]!, width: 4),
             ),
             alignment: Alignment.center,
             child: Text(
