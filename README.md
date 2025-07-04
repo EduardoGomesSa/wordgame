@@ -2,6 +2,9 @@
 ## Sobre
 <p>Aplicativo desenvolvido em Flutter para estudo do framework</p>
 
+## Tecnologias
+- Flutter
+
 ## Funcionalidades
 - Jogo de palavras livres
 - Jogo de palavras por letra
