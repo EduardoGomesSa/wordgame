@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
+import 'package:wordgame/src/screens/home/modals/new_word_modal.dart';
 
 class StopWatcherDown extends StatefulWidget {
   const StopWatcherDown({super.key});
@@ -20,9 +21,19 @@ class _StopWatcherDownState extends State<StopWatcherDown> {
       onEnded: () {
         debugPrint('Contagem regressiva finalizada!');
         Navigator.pop(context);
+        _openModal(context);
       },
     );
     stopWatchTimer.onStartTimer(); // inicia automaticamente
+  }
+
+  void _openModal(BuildContext context) async {
+    final String? newWord = await showModalBottomSheet(
+        context: context, builder: (context) => const NewWordModal());
+
+    if(newWord != null || newWord!.isNotEmpty) {
+      print("usuario digitou: $newWord");
+    }
   }
 
   @override
@@ -58,10 +69,9 @@ class _StopWatcherDownState extends State<StopWatcherDown> {
             child: Text(
               displayTime,
               style: const TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: Colors.white
-              ),
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           );
         },
