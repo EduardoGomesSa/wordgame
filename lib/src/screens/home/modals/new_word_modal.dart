@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:wordgame/src/controllers/game_controller.dart';
 
 class NewWordModal extends StatelessWidget {
-  const NewWordModal({super.key});
+  final GameController controller;
+  
+  const NewWordModal({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {

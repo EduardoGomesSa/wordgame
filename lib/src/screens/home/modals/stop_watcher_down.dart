@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
+import 'package:wordgame/src/controllers/game_controller.dart';
 import 'package:wordgame/src/screens/home/modals/new_word_modal.dart';
 
 class StopWatcherDown extends StatefulWidget {
@@ -11,6 +12,7 @@ class StopWatcherDown extends StatefulWidget {
 
 class _StopWatcherDownState extends State<StopWatcherDown> {
   late StopWatchTimer stopWatchTimer;
+  final controller = GameController();
 
   @override
   void initState() {
@@ -29,7 +31,7 @@ class _StopWatcherDownState extends State<StopWatcherDown> {
 
   void _openModal(BuildContext context) async {
     final String? newWord = await showModalBottomSheet(
-        context: context, builder: (context) => const NewWordModal());
+        context: context, builder: (context) => NewWordModal(controller: controller,));
 
     if(newWord != null || newWord!.isNotEmpty) {
       print("usuario digitou: $newWord");
