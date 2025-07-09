@@ -12,7 +12,7 @@ class NewWordModal extends StatelessWidget {
 
     return Padding(
       padding: EdgeInsets.only(
-        bottom: MediaQuery.of(context).viewInsets.bottom,
+        bottom: MediaQuery.of(context).viewInsets.bottom + 10,
         top: 20,
         left: 20,
         right: 20,
@@ -40,13 +40,17 @@ class NewWordModal extends StatelessWidget {
             },
           ),
           const SizedBox(height: 16),
-          ElevatedButton(
-            onPressed: () {
-              gameController.wordsList.add(controller.text);
-              print(gameController.wordsList);
-              Navigator.of(context).pop(controller.text);
-            },
-            child: const Text("Confirmar"),
+          SizedBox(
+            width: double.infinity,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: () {
+                gameController.wordsList.add(controller.text);
+                print(gameController.wordsList);
+                Navigator.of(context).pop(controller.text);
+              },
+              child: const Text("Confirmar"),
+            ),
           ),
         ],
       ),
