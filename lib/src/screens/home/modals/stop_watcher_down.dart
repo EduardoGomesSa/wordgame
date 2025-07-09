@@ -19,19 +19,19 @@ class _StopWatcherDownState extends State<StopWatcherDown> {
     super.initState();
     stopWatchTimer = StopWatchTimer(
       mode: StopWatchMode.countDown,
-      presetMillisecond: 6000, // 5 segundos
+      presetMillisecond: 6000, 
       onEnded: () {
         debugPrint('Contagem regressiva finalizada!');
         Navigator.pop(context);
         _openModal(context);
       },
     );
-    stopWatchTimer.onStartTimer(); // inicia automaticamente
+    stopWatchTimer.onStartTimer(); 
   }
 
   void _openModal(BuildContext context) async {
     final String? newWord = await showModalBottomSheet(
-        context: context, builder: (context) => NewWordModal(controller: controller,));
+        context: context, builder: (context) => NewWordModal(gameController: controller,));
 
     if(newWord != null || newWord!.isNotEmpty) {
       print("usuario digitou: $newWord");

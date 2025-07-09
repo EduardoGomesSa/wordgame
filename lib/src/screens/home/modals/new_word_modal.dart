@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:wordgame/src/controllers/game_controller.dart';
 
 class NewWordModal extends StatelessWidget {
-  final GameController controller;
+  final GameController gameController;
   
-  const NewWordModal({super.key, required this.controller});
+  const NewWordModal({super.key, required this.gameController});
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +42,8 @@ class NewWordModal extends StatelessWidget {
           const SizedBox(height: 16),
           ElevatedButton(
             onPressed: () {
+              gameController.wordsList.add(controller.text);
+              print(gameController.wordsList);
               Navigator.of(context).pop(controller.text);
             },
             child: const Text("Confirmar"),
