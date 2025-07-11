@@ -1,9 +1,10 @@
 # WordGame
 ## Sobre
-<p>Aplicativo desenvolvido em Flutter para estudo do framework</p>
+<p>Aplicativo desenvolvido em Flutter para estudo do framework. Consistirá em um jogo onde o usuário vai informando palavras, seguindo algumas regras</p>
 
 ## Tecnologias
 - Flutter
+- SQLite
 
 ## Funcionalidades
 - Jogo de palavras livres
