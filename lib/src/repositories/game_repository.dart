@@ -1,1 +1,3 @@
-class GameRepository {}
+class GameRepository {
+  void createRecord() {}
+}
